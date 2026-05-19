@@ -225,6 +225,7 @@ ul {
 .tagline p {
   font-family: var(--font);
   font-weight: 300;
+  font-style: italic;
   font-size: clamp(15px, 1.8vw, 20px);
   line-height: 1.6;
   color: var(--plum);
@@ -239,17 +240,17 @@ ul {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 0;
-  background: var(--black);
-  border-top: 1px solid var(--black);
-  border-left: 1px solid var(--black);
+  background: var(--plum);
+  border-top: 1px solid var(--plum);
+  border-left: 1px solid var(--plum);
 }
 
 .work-grid__item {
   position: relative;
   aspect-ratio: 4 / 3;
   background: var(--pearl);
-  border-right: 1px solid var(--black);
-  border-bottom: 1px solid var(--black);
+  border-right: 1px solid var(--plum);
+  border-bottom: 1px solid var(--plum);
   overflow: hidden;
   display: block;
 }
@@ -308,10 +309,20 @@ ul {
   background: var(--white);
 }
 
-.manifesto p {
+.manifesto__headline {
+  font-family: var(--font);
+  font-weight: 700;
+  font-size: clamp(18px, 2.2vw, 28px);
+  line-height: 1.25;
+  color: var(--plum);
+  max-width: 600px;
+  margin: 0 auto 28px;
+}
+
+.manifesto__body {
   font-family: var(--font);
   font-weight: 300;
-  font-size: clamp(14px, 1.6vw, 18px);
+  font-size: clamp(13px, 1.4vw, 16px);
   line-height: 1.9;
   color: var(--plum);
   max-width: 600px;
@@ -329,6 +340,7 @@ ul {
   width: 100%;
   height: auto;
   display: block;
+  filter: grayscale(100%);
 }
 
 .studio__caption {
