@@ -217,7 +217,7 @@ ul {
    TAGLINE — Homepage
    ------------------------------------------------------------ */
 .tagline {
-  padding: 60px 0 60px 32px;
+  padding: 60px 32px;
   text-align: right;
   background: var(--white);
 }
