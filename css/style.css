@@ -1,0 +1,913 @@
+/* ============================================================
+   ATTELJE — Main Stylesheet
+   Stack: HTML / CSS / vanilla JS · GitHub · Vercel
+   Font: II Vorkurs (OTF — Light, LightOblique, Medium, MediumOblique, Bold, BoldOblique)
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   FONTS
+   ------------------------------------------------------------ */
+@font-face {
+  font-family: 'IIVorkurs';
+  src: url('../fonts/IIVorkurs-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'IIVorkurs';
+  src: url('../fonts/IIVorkurs-LightOblique.otf') format('opentype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'IIVorkurs';
+  src: url('../fonts/IIVorkurs-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'IIVorkurs';
+  src: url('../fonts/IIVorkurs-MediumOblique.otf') format('opentype');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'IIVorkurs';
+  src: url('../fonts/IIVorkurs-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'IIVorkurs';
+  src: url('../fonts/IIVorkurs-BoldOblique.otf') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* ------------------------------------------------------------
+   DESIGN TOKENS
+   ------------------------------------------------------------ */
+:root {
+  --pearl:   #F2F3F5;
+  --plum:    #720064;
+  --mint:    #78C3BF;
+  --black:   #000000;
+  --white:   #FFFFFF;
+
+  --font:    'IIVorkurs', sans-serif;
+
+  --nav-height: 64px;
+
+  --ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* ------------------------------------------------------------
+   RESET
+   ------------------------------------------------------------ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font);
+  font-weight: 300;
+  color: var(--black);
+  background: var(--white);
+  overflow-x: hidden;
+}
+
+img, video {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ------------------------------------------------------------
+   NAV
+   ------------------------------------------------------------ */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: var(--nav-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  background: var(--white);
+  transition: background 0.3s var(--ease);
+}
+
+.nav__logo img {
+  height: 22px;
+  width: auto;
+}
+
+.nav__links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav__links a {
+  font-family: var(--font);
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  color: var(--black);
+  transition: color 0.2s var(--ease);
+}
+
+.nav__links a:hover,
+.nav__links a.active {
+  color: var(--plum);
+}
+
+/* Offset page content below fixed nav */
+.nav-spacer {
+  height: var(--nav-height);
+}
+
+/* ------------------------------------------------------------
+   HERO — Homepage
+   ------------------------------------------------------------ */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 65vh;
+  min-height: 420px;
+  overflow: hidden;
+  background: var(--black);
+}
+
+.hero__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero__play {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font);
+  font-weight: 300;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  color: var(--white);
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0;
+  transition: opacity 0.2s var(--ease);
+}
+
+.hero__play:hover {
+  opacity: 0.7;
+}
+
+.hero__play-icon {
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero__play-icon svg {
+  width: 12px;
+  height: 12px;
+  fill: var(--white);
+  margin-left: 2px;
+}
+
+/* ------------------------------------------------------------
+   TAGLINE — Homepage
+   ------------------------------------------------------------ */
+.tagline {
+  padding: 80px 32px;
+  text-align: center;
+  background: var(--white);
+}
+
+.tagline p {
+  font-family: var(--font);
+  font-weight: 300;
+  font-size: clamp(15px, 1.8vw, 20px);
+  line-height: 1.6;
+  color: var(--plum);
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+/* ------------------------------------------------------------
+   WORK GRID — Homepage
+   ------------------------------------------------------------ */
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  background: var(--black);
+  border-top: 1px solid var(--black);
+  border-left: 1px solid var(--black);
+}
+
+.work-grid__item {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  background: var(--pearl);
+  border-right: 1px solid var(--black);
+  border-bottom: 1px solid var(--black);
+  overflow: hidden;
+  display: block;
+}
+
+.work-grid__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s var(--ease);
+}
+
+.work-grid__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.35s var(--ease);
+  padding: 24px;
+  text-align: center;
+}
+
+.work-grid__item:hover .work-grid__overlay {
+  opacity: 1;
+}
+
+.work-grid__item:hover img {
+  transform: scale(1.03);
+}
+
+.work-grid__name {
+  font-family: var(--font);
+  font-weight: 500;
+  font-size: clamp(16px, 2vw, 22px);
+  color: var(--white);
+  margin-bottom: 8px;
+}
+
+.work-grid__category {
+  font-family: var(--font);
+  font-weight: 300;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 0.04em;
+}
+
+/* ------------------------------------------------------------
+   MANIFESTO — Homepage
+   ------------------------------------------------------------ */
+.manifesto {
+  padding: 100px 32px;
+  text-align: center;
+  background: var(--white);
+}
+
+.manifesto p {
+  font-family: var(--font);
+  font-weight: 300;
+  font-size: clamp(14px, 1.6vw, 18px);
+  line-height: 1.9;
+  color: var(--plum);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ------------------------------------------------------------
+   STUDIO SECTION — Homepage + Contact
+   ------------------------------------------------------------ */
+.studio {
+  width: 100%;
+}
+
+.studio__image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.studio__caption {
+  padding: 20px 32px 60px;
+  font-family: var(--font);
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--plum);
+}
+
+/* ------------------------------------------------------------
+   FOOTER
+   ------------------------------------------------------------ */
+.footer {
+  background: var(--pearl);
+  padding: 60px 32px 0;
+}
+
+.footer__nav-label {
+  font-family: var(--font);
+  font-weight: 300;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  color: var(--black);
+  margin-bottom: 12px;
+  text-transform: none;
+}
+
+.footer__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: 48px;
+}
+
+.footer__nav a {
+  font-family: var(--font);
+  font-weight: 300;
+  font-size: clamp(48px, 7vw, 80px);
+  line-height: 1.05;
+  color: var(--plum);
+  transition: opacity 0.2s var(--ease);
+}
+
+.footer__nav a:hover {
+  opacity: 0.7;
+}
+
+.footer__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.footer__wordmark img {
+  height: 28px;
+  width: auto;
+}
+
+.footer__credit {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font);
+  font-weight: 300;
+  font-size: 12px;
+  color: var(--black);
+}
+
+.footer__credit img {
+  height: 36px;
+  width: auto;
+}
+
+.footer__bar {
+  height: 10px;
+  background: var(--plum);
+  margin: 0 -32px;
+}
+
+/* ------------------------------------------------------------
+   ABOUT PAGE
+   ------------------------------------------------------------ */
+.about {
+  padding: 60px 32px 80px;
+}
+
+.about__inner {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about__portrait {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: grayscale(100%);
+}
+
+.about__links {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.about__links a {
+  font-family: var(--font);
+  font-weight: 300;
+  font-size: 14px;
+  color: var(--plum);
+  transition: opacity 0.2s;
+}
+
+.about__links a:hover {
+  opacity: 0.7;
+}
+
+.about__copy {
+  padding-top: 8px;
+}
+
+.about__copy p {
+  font-family: var(--font);
+  font-weight: 300;
+  font-size: clamp(16px, 1.8vw, 20px);
+  line-height: 1.65;
+  color: var(--black);
+  margin-bottom: 1.4em;
+}
+
+.about__copy a {
+  color: var(--plum);
+}
+
+.about__copy a:hover {
+  text-decoration: underline;
+}
+
+.about__services {
+  padding: 40px 32px 60px;
+  border-top: 1px solid rgba(0,0,0,0.1);
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about__services p {
+  font-family: var(--font);
+  font-weight: 300;
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  color: var(--black);
+}
+
+/* ------------------------------------------------------------
+   MARQUEE — About page
+   ------------------------------------------------------------ */
+.marquee {
+  overflow: hidden;
+  padding: 48px 0;
+  background: var(--white);
+  border-top: 1px solid rgba(0,0,0,0.08);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.marquee__row {
+  display: flex;
+  width: max-content;
+  gap: 64px;
+  margin-bottom: 32px;
+}
+
+.marquee__row:last-child {
+  margin-bottom: 0;
+}
+
+.marquee__row--left {
+  animation: marquee-left 30s linear infinite;
+}
+
+.marquee__row--right {
+  animation: marquee-right 30s linear infinite;
+}
+
+.marquee__row img {
+  height: 32px;
+  width: auto;
+  filter: grayscale(100%);
+  opacity: 0.6;
+  transition: opacity 0.2s;
+  flex-shrink: 0;
+}
+
+.marquee__row img:hover {
+  opacity: 1;
+}
+
+@keyframes marquee-left {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marquee-right {
+  0%   { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+/* Pause on hover */
+.marquee:hover .marquee__row {
+  animation-play-state: paused;
+}
+
+/* ------------------------------------------------------------
+   CONTACT PAGE
+   ------------------------------------------------------------ */
+.contact {
+  padding: 60px 32px 0;
+}
+
+.contact__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+  max-width: 1200px;
+  margin: 0 auto 64px;
+}
+
+.contact__heading {
+  font-family: var(--font);
+  font-weight: 300;
+  font-size: clamp(52px, 8vw, 96px);
+  line-height: 1;
+  color: var(--plum);
+}
+
+.contact__body {
+  padding-top: 12px;
+}
+
+.contact__body p {
+  font-family: var(--font);
+  font-weight: 300;
+  font-size: clamp(16px, 1.8vw, 20px);
+  line-height: 1.6;
+  color: var(--black);
+  margin-bottom: 24px;
+}
+
+.contact__email {
+  font-family: var(--font);
+  font-weight: 500;
+  font-size: clamp(16px, 1.8vw, 20px);
+  color: var(--plum);
+  transition: opacity 0.2s;
+}
+
+.contact__email:hover {
+  opacity: 0.7;
+}
+
+/* ------------------------------------------------------------
+   CASE PAGE — Hero
+   ------------------------------------------------------------ */
+.case-hero {
+  width: 100%;
+  position: relative;
+  background: var(--black);
+  overflow: hidden;
+}
+
+.case-hero video,
+.case-hero img {
+  width: 100%;
+  height: 65vh;
+  min-height: 380px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ------------------------------------------------------------
+   CASE PAGE — Intro
+   ------------------------------------------------------------ */
+.case-intro {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+  padding: 60px 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.case-intro__meta {}
+
+.case-intro__title {
+  font-family: var(--font);
+  font-weight: 500;
+  font-size: clamp(18px, 2vw, 24px);
+  color: var(--black);
+  margin-bottom: 16px;
+}
+
+.case-intro__deliverables {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.case-intro__deliverables li {
+  font-family: var(--font);
+  font-weight: 300;
+  font-size: 13px;
+  color: var(--black);
+  line-height: 1.6;
+}
+
+.case-intro__description {
+  font-family: var(--font);
+  font-weight: 300;
+  font-size: clamp(15px, 1.7vw, 18px);
+  line-height: 1.75;
+  color: var(--black);
+}
+
+/* ------------------------------------------------------------
+   CASE PAGE — Content sections
+   ------------------------------------------------------------ */
+.case-content {
+  width: 100%;
+}
+
+.case-section {
+  width: 100%;
+}
+
+/* Full-width image */
+.case-section--full img,
+.case-section--full video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Two-column image grid */
+.case-section--two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+
+.case-section--two-col img,
+.case-section--two-col video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Three-column image grid */
+.case-section--three-col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+}
+
+.case-section--three-col img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Four-column image grid */
+.case-section--four-col {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+
+.case-section--four-col img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Padded content section */
+.case-section--padded {
+  padding: 0 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Case video (looping, no controls) */
+.case-video {
+  width: 100%;
+  display: block;
+}
+
+/* ------------------------------------------------------------
+   CASE PAGE — Prev / Next
+   ------------------------------------------------------------ */
+.case-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 48px 32px;
+  border-top: 1px solid rgba(0,0,0,0.1);
+  margin-top: 40px;
+}
+
+.case-nav a {
+  font-family: var(--font);
+  font-weight: 300;
+  font-size: 14px;
+  color: var(--black);
+  transition: color 0.2s var(--ease);
+}
+
+.case-nav a:hover {
+  color: var(--plum);
+}
+
+/* ------------------------------------------------------------
+   SHOWREEL MODAL
+   ------------------------------------------------------------ */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(0, 0, 0, 0.92);
+  align-items: center;
+  justify-content: center;
+}
+
+.modal.is-open {
+  display: flex;
+}
+
+.modal__inner {
+  position: relative;
+  width: 90vw;
+  max-width: 1100px;
+  aspect-ratio: 16 / 9;
+}
+
+.modal__inner video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.modal__close {
+  position: absolute;
+  top: -44px;
+  right: 0;
+  font-family: var(--font);
+  font-weight: 300;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  color: var(--white);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.modal__close:hover {
+  opacity: 0.6;
+}
+
+/* ------------------------------------------------------------
+   RESPONSIVE
+   ------------------------------------------------------------ */
+@media (max-width: 900px) {
+  .nav {
+    padding: 0 20px;
+  }
+
+  .nav__links {
+    gap: 20px;
+  }
+
+  .work-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about__inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .about__portrait {
+    max-width: 320px;
+  }
+
+  .contact__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .case-intro {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 40px 20px;
+  }
+
+  .case-section--two-col,
+  .case-section--three-col,
+  .case-section--four-col {
+    grid-template-columns: 1fr;
+  }
+
+  .case-nav {
+    padding: 32px 20px;
+  }
+
+  .footer {
+    padding: 48px 20px 0;
+  }
+
+  .footer__bar {
+    margin: 0 -20px;
+  }
+
+  .studio__caption {
+    padding: 16px 20px 48px;
+  }
+}
+
+@media (max-width: 600px) {
+  .work-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    height: 55vw;
+    min-height: 280px;
+  }
+
+  .tagline {
+    padding: 56px 20px;
+  }
+
+  .manifesto {
+    padding: 72px 20px;
+  }
+
+  .about {
+    padding: 40px 20px 60px;
+  }
+
+  .about__services {
+    padding: 32px 20px 48px;
+  }
+
+  .contact {
+    padding: 40px 20px 0;
+  }
+
+  .contact__heading {
+    font-size: clamp(40px, 12vw, 72px);
+  }
+
+  .case-hero video,
+  .case-hero img {
+    height: 55vw;
+  }
+
+  .footer__nav a {
+    font-size: clamp(36px, 11vw, 60px);
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+  }
+}
