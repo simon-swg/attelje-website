@@ -217,7 +217,7 @@ ul {
    TAGLINE — Homepage
    ------------------------------------------------------------ */
 .tagline {
-  padding: 60px 32px;
+  padding: 60px 0 60px 32px;
   text-align: right;
   background: var(--white);
 }
@@ -228,6 +228,7 @@ ul {
   font-style: normal;
   font-size: clamp(22px, 4vw, 50px);
   line-height: 1.25;
+  letter-spacing: -0.05em;
   color: var(--plum);
   max-width: none;
   margin: 0;
@@ -239,8 +240,8 @@ ul {
 .work-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2px;
-  background: var(--pearl);
+  gap: 0;
+  background: var(--white);
 }
 
 .work-grid__item {
@@ -313,6 +314,7 @@ ul {
   font-weight: 500;
   font-size: clamp(22px, 4vw, 50px);
   line-height: 1.4;
+  letter-spacing: -0.05em;
   color: var(--plum);
   max-width: 700px;
   margin: 0 auto;
@@ -323,6 +325,7 @@ ul {
   font-weight: 300;
   font-size: clamp(22px, 4vw, 50px);
   line-height: 1.4;
+  letter-spacing: -0.05em;
   color: var(--plum);
   max-width: 700px;
   margin: 0 auto;
@@ -884,8 +887,7 @@ ul {
   }
 
   .tagline {
-    padding: 56px 20px;
-    text-align: left;
+    padding: 56px 0 56px 20px;
   }
 
   .manifesto {
