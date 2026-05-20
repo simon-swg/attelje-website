@@ -928,6 +928,10 @@ ul {
     padding: 56px 20px;
   }
 
+  .tagline p {
+    font-size: 5vw;
+  }
+
   .manifesto {
     padding: 72px 20px;
   }
