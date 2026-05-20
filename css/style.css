@@ -692,6 +692,10 @@ ul {
    ------------------------------------------------------------ */
 .case-content {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding-bottom: 32px;
 }
 
 .case-section {
@@ -706,11 +710,11 @@ ul {
   display: block;
 }
 
-/* Two-column image grid */
+/* Two-column -> stacked */
 .case-section--two-col {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 }
 
 .case-section--two-col img,
@@ -720,11 +724,11 @@ ul {
   display: block;
 }
 
-/* Three-column image grid */
+/* Three-column -> stacked */
 .case-section--three-col {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 }
 
 .case-section--three-col img {
@@ -733,11 +737,11 @@ ul {
   display: block;
 }
 
-/* Four-column image grid */
+/* Four-column -> stacked */
 .case-section--four-col {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 }
 
 .case-section--four-col img {
@@ -866,11 +870,7 @@ ul {
     padding: 40px 20px;
   }
 
-  .case-section--two-col,
-  .case-section--three-col,
-  .case-section--four-col {
-    grid-template-columns: 1fr;
-  }
+  /* case sections already stacked */
 
   .case-nav {
     padding: 32px 20px;
