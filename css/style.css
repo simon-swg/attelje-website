@@ -508,7 +508,6 @@ ul {
 
 .about__services {
   padding: 40px 32px 60px;
-  border-top: 1px solid rgba(0,0,0,0.1);
   text-align: center;
   max-width: 1200px;
   margin: 0 auto;
@@ -517,9 +516,8 @@ ul {
 .about__services p {
   font-family: var(--font);
   font-weight: 300;
-  font-size: 13px;
-  letter-spacing: 0.05em;
-  color: var(--black);
+  font-size: clamp(16px, 2.2vw, 30px);
+  color: var(--plum);
 }
 
 /* ------------------------------------------------------------
@@ -529,8 +527,6 @@ ul {
   overflow: hidden;
   padding: 48px 0;
   background: var(--white);
-  border-top: 1px solid rgba(0,0,0,0.08);
-  border-bottom: 1px solid rgba(0,0,0,0.08);
 }
 
 .marquee__row {
