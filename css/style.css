@@ -594,6 +594,7 @@ ul {
   font-weight: 300;
   font-size: clamp(52px, 8vw, 96px);
   line-height: 1;
+  letter-spacing: -0.05em;
   color: var(--plum);
 }
 
@@ -604,8 +605,9 @@ ul {
 .contact__body p {
   font-family: var(--font);
   font-weight: 300;
-  font-size: clamp(16px, 1.8vw, 20px);
+  font-size: clamp(18px, 2.2vw, 30px);
   line-height: 1.6;
+  letter-spacing: -0.05em;
   color: var(--black);
   margin-bottom: 24px;
 }
