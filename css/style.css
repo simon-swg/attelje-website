@@ -760,7 +760,7 @@ ul {
 .case-section--three-col.case-section--grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
+  gap: 16px;
 }
 
 .case-section--four-col.case-section--grid {
