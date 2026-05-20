@@ -126,6 +126,7 @@ ul {
 .nav__logo img {
   height: 38px;
   width: auto;
+  margin-left: -4px;
 }
 
 .nav__links {
@@ -411,6 +412,7 @@ ul {
 .footer__wordmark img {
   height: 38px;
   width: auto;
+  margin-left: -4px;
 }
 
 .footer__credit {
