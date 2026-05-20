@@ -77,7 +77,7 @@
 }
 
 html {
-  font-size: 16px;
+  font-size: 19px;
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -124,7 +124,7 @@ ul {
 }
 
 .nav__logo img {
-  height: 32px;
+  height: 38px;
   width: auto;
 }
 
