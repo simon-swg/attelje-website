@@ -750,6 +750,25 @@ ul {
   display: block;
 }
 
+/* Grid override — restores side-by-side layout for specific sections */
+.case-section--two-col.case-section--grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+
+.case-section--three-col.case-section--grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+}
+
+.case-section--four-col.case-section--grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+
 /* Padded content section */
 .case-section--padded {
   padding: 0 32px;
