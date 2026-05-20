@@ -889,7 +889,8 @@ ul {
     padding: 40px 20px;
   }
 
-  .case-hero img {
+  .case-hero img,
+  .case-hero video {
     height: auto;
     min-height: unset;
   }
