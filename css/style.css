@@ -468,7 +468,7 @@ ul {
 
 .about__links a {
   font-family: var(--font);
-  font-weight: 300;
+  font-weight: 500;
   font-size: 14px;
   color: var(--plum);
   transition: opacity 0.2s;
@@ -497,6 +497,7 @@ ul {
 
 .about__copy a {
   color: var(--plum);
+  font-weight: 500;
 }
 
 .about__copy a:hover {
