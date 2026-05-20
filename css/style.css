@@ -479,7 +479,11 @@ ul {
 }
 
 .about__copy {
-  padding-top: 8px;
+  padding-top: 120px;
+}
+
+.about__intro {
+  font-weight: 500;
 }
 
 .about__copy p {
