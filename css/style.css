@@ -471,6 +471,9 @@ ul {
   font-weight: 300;
   font-size: 14px;
   color: var(--plum);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
   transition: opacity 0.2s;
 }
 
