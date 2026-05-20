@@ -889,6 +889,11 @@ ul {
     padding: 40px 20px;
   }
 
+  .case-hero img {
+    height: auto;
+    min-height: unset;
+  }
+
   /* case sections already stacked */
 
   .case-nav {
