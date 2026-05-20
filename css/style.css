@@ -754,7 +754,7 @@ ul {
 .case-section--two-col.case-section--grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0;
+  gap: 16px;
 }
 
 .case-section--three-col.case-section--grid {
@@ -766,7 +766,7 @@ ul {
 .case-section--four-col.case-section--grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 0;
+  gap: 16px;
 }
 
 /* Padded content section */
