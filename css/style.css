@@ -373,7 +373,7 @@ ul {
 .footer__nav-label {
   font-family: var(--font);
   font-weight: 300;
-  font-size: 12px;
+  font-size: 19px;
   letter-spacing: 0.06em;
   color: var(--black);
   margin-bottom: 12px;
@@ -409,7 +409,7 @@ ul {
 }
 
 .footer__wordmark img {
-  height: 28px;
+  height: 38px;
   width: auto;
 }
 
@@ -419,12 +419,12 @@ ul {
   gap: 8px;
   font-family: var(--font);
   font-weight: 300;
-  font-size: 12px;
+  font-size: 19px;
   color: var(--black);
 }
 
 .footer__credit img {
-  height: 36px;
+  height: 38px;
   width: auto;
 }
 
