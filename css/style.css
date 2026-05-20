@@ -883,6 +883,10 @@ ul {
     grid-template-columns: 1fr;
   }
 
+  .contact__body {
+    padding-top: 0;
+  }
+
   .case-intro {
     grid-template-columns: 1fr;
     gap: 24px;
