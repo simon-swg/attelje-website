@@ -925,7 +925,7 @@ ul {
   }
 
   .tagline {
-    padding: 56px 0 56px 20px;
+    padding: 56px 20px;
   }
 
   .manifesto {
@@ -950,7 +950,8 @@ ul {
 
   .case-hero video,
   .case-hero img {
-    height: 55vw;
+    height: auto;
+    min-height: unset;
   }
 
   .footer__nav a {
