@@ -549,6 +549,10 @@ ul {
 
 @keyframes twinkle {
   0%, 100% { opacity: 0.2; }
+
+.logo-grid img[alt="Finnair"] {
+  height: 22px;
+}
   50%       { opacity: 1; }
 }
 
