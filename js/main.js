@@ -67,4 +67,14 @@
     });
   });
 
+
+
+  // ----------------------------------------------------------
+  // LOGO GRID — randomise twinkle timing per logo
+  // ----------------------------------------------------------
+  document.querySelectorAll('.logo-grid img').forEach(function (img) {
+    img.style.animationDelay    = (Math.random() * 8).toFixed(2) + 's';
+    img.style.animationDuration = (3 + Math.random() * 5).toFixed(2) + 's';
+  });
+
 })();
