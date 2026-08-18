@@ -7,8 +7,14 @@ Newest first. Append only — never rewrite an entry. A correction is a new entr
 
 ---
 
+## 2026-08-18 — Profile `build` approved, and `_Project Notes.md` retired as the record
+**Status:** APPROVED
+**Decision:** Both RECOMMENDED entries of this date are signed off. This repo runs at profile `build`. `_Project Notes.md` is no longer where project status lives — decisions come here, the live job goes to `aios/tasks/`, and current facts are generated into `aios/STATE.md`.
+**Evidence:** Owner signed both in session on 2026-08-18, after being shown the three stale claims in `_Project Notes.md` — platform named as Framer against a hand-built site, build status reading "ready for handoff" against a site live since June, and a nine-case list contradicted by `work/` and by a later section of the same file.
+**Practical consequence:** A banner at the top of `_Project Notes.md` now points here, so the file states its own status rather than reading as current. Its reference material — brand system, approved copy, video inventory, client list — remains valid and stays on disk.
+
 ## 2026-08-18 — `_Project Notes.md` is superseded as the record of this project
-**Status:** RECOMMENDED
+**Status:** SUPERSEDED — signed off by the entry of 2026-08-18 approving it
 **Decision:** `_Project Notes.md` (on disk beside this repo, not in it) stops being the place project state is kept. Decisions go to this log, the live job goes to `aios/tasks/`, and current facts are generated into `aios/STATE.md`.
 **Evidence:** At the point of migration the file stated the platform was Framer (the site is hand-built HTML/CSS), that build status was "ready for handoff, Filippos's Claude to build the site" (the site has been live since June), and listed nine cases — Polpo Play, Sparc, Skäringer Nessvold, Mercedes — that are not the nine in `work/`. A later section of the same file lists the correct nine. Three stale claims, all contradicted by the repo, none flagged.
 **Practical consequence:** The reference material in it — brand system, approved copy, video inventory, client list — is still good and stays where it is. Its *state* claims are dead. Awaiting the owner's verdict.
@@ -17,7 +23,7 @@ Newest first. Append only — never rewrite an entry. A correction is a new entr
 **Change.** `index.html`, `about.html` and `contact.html` carried triple-encoded UTF-8 in sixteen places: all three page titles, all three `og:title` tags, "Taxi Göteborg" twice on the homepage work grid, the modal close button, and seven separators in the services line on About. Introduced by the June round of commits that added OG meta tags; the nine case pages under `work/` were untouched and were always correct. Repaired by decoding each run back to its original character. No other file changed.
 
 ## 2026-08-18 — Profile is `build`, not `core`
-**Status:** RECOMMENDED
+**Status:** SUPERSEDED — signed off by the entry of 2026-08-18 approving `build`
 **Decision:** This repo installs at profile `build`, which adds `aios/CANON.md` to the core set.
 **Evidence:** It ships a deployed artefact — eleven pages on Vercel, auto-deploying from `main`. It records no experimental runs, so not `research`; it runs on no schedule, so not `operator`.
 **Practical consequence:** `aios/CANON.md` is required and is now written by hand. Awaiting the owner's verdict — pass, adjust or kill.
