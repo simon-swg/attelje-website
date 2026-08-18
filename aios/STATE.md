@@ -1,6 +1,6 @@
 <!-- GENERATED — do not edit. Edits are overwritten at next close. -->
-Generated 2026-08-18 13:39 +0000 · HEAD 3a08c89 · branch main · host claude · generator v2.0
-STALENESS RULE: if `git rev-parse HEAD` ≠ 3a08c89, or the tree is dirty, this file is HISTORY. Regenerate before acting on it.
+Generated 2026-08-18 13:57 +0000 · HEAD 4ebd1df · branch main · host claude · generator v2.0
+STALENESS RULE: if `git rev-parse HEAD` ≠ 4ebd1df, or the tree is dirty, this file is HISTORY. Regenerate before acting on it.
 
 ## 1 · Identity
 <sub>CLAUDE.md, the five human lines — the only human input in this file</sub>
@@ -14,16 +14,16 @@ STALENESS RULE: if `git rev-parse HEAD` ≠ 3a08c89, or the tree is dirty, this 
 ## 2 · Head
 <sub>git rev-parse HEAD · git log -1 · git rev-list --left-right --count @{u}...HEAD</sub>
 
-> **As of `3a08c89`.** The close commits this file after generating it, so the counts below are one commit old the moment they land. Re-run `aios-state` for current numbers.
+> **As of `4ebd1df`.** The close commits this file after generating it, so the counts below are one commit old the moment they land. Re-run `aios-state` for current numbers.
 
-- **main @ 3a08c89** — Repair character encoding on three pages; install AiOS v2.0 at profile build
-- Committed 2026-08-18 13:39 by simon-swg
+- **main @ 4ebd1df** — Approve profile build and the retirement of _Project Notes.md as the record
+- Committed 2026-08-18 13:57 by simon-swg
 - Upstream: origin/main · **1 ahead**, 0 behind
 
 ## 3 · Working tree
 <sub>git status --porcelain + a filesystem diff against git ls-files</sub>
 
-> **As of `3a08c89`, before this file was committed.** `aios/STATE.md` and `aios/CLOSING` appear here for that reason and are not real dirt.
+> **As of `4ebd1df`, before this file was committed.** `aios/STATE.md` and `aios/CLOSING` appear here for that reason and are not real dirt.
 
 - Clean.
 
@@ -33,17 +33,17 @@ STALENESS RULE: if `git rev-parse HEAD` ≠ 3a08c89, or the tree is dirty, this 
 - None. Every branch has an upstream.
 
 ## 5 · Since last close
-<sub>no close marker yet — first surface</sub>
+<sub>git log 3a08c89..HEAD</sub>
 
-- **No previous close marker.** This is the first generated surface for this repo; the next close writes one here.
+- `4ebd1df` 2026-08-18 — Approve profile build and the retirement of _Project Notes.md as the record
+- `e86304c` 2026-08-18 — Generate aios/STATE.md — first surface for this repo
 
-Close marker: 3a08c8973a0737e4a2e86676654518234a83d687
+Close marker: 4ebd1df5926e80387e026f247bbea94b42a3ac9e
 
 ## 6 · Awaiting judgment
 <sub>aios/LOG.md headings + **Status:** lines — headings, dates and statuses only, never bodies</sub>
 
-- **RECOMMENDED** · 2026-08-18 (0d) — `_Project Notes.md` is superseded as the record of this project
-- **RECOMMENDED** · 2026-08-18 (0d) — Profile is `build`, not `core`
+- Nothing awaiting judgment. Every logged decision is APPROVED or SUPERSEDED.
 
 ## 7 · Active tasks
 <sub>aios/tasks/* + git log -1 -- <file></sub>
@@ -55,8 +55,9 @@ Close marker: 3a08c8973a0737e4a2e86676654518234a83d687
 
 - `CLAUDE.md` — 0d old, **0d behind** the newest commit in the repo
 - `aios/CANON.md` — 0d old, **0d behind** the newest commit in the repo
-- `aios/LOG.md` — 0d old, **0d behind** the newest commit in the repo
+- `aios/STATE.md` — 0d old, **0d behind** the newest commit in the repo
 - `aios/tasks/TASK_001.md` — 0d old, **0d behind** the newest commit in the repo
+- `aios/LOG.md` — 0d old, **0d behind** the newest commit in the repo
 
 ## 9 · Cross-repo pins
 <sub>CLAUDE.md `Depends on:` (human) + the sibling's own git</sub>
@@ -70,7 +71,7 @@ Close marker: 3a08c8973a0737e4a2e86676654518234a83d687
 ## 11 · Could not determine
 <sub>the generator's own error list</sub>
 
-- §5 — no close marker in the previous surface — this is the first surface, so "since last close" is the whole reachable history and is reported as such
+- Nothing. Every source parsed and every git command ran.
 
 ---
 <sub>Generated on claude by `/sessions/rcw-01xesqw9ga8zi1fsnrfd4yub/mnt/CLAUDE COWORK/AiOS/aios-v2.0/bin/aios-state.mjs` v2.0, against /sessions/rcw-01xesqw9ga8zi1fsnrfd4yub/mnt/CLAUDE COWORK/SILLY WIZARDS/6. Attelje/attelje-repo. Regenerate with `node <that path> .` from the repo root. A hand edit is check failure S1.</sub>
