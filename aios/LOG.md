@@ -7,6 +7,12 @@ Newest first. Append only — never rewrite an entry. A correction is a new entr
 
 ---
 
+## 2026-10-07 — Attelje is part of the Guild family, a minor sibling; SWG treatment on a branch
+**Status:** APPROVED
+**Decision:** Attelje is part of the Silly Wizards Guild family as a minor sibling, superseding the canon line "not a Silly Wizards venture". The site takes the Guild's editorial system in Attelje's own colours and II Vorkurs, built on branch `collab/simon-swg-treatment`. Footer credit reads "Part of Silly Wizards Guild".
+**Evidence:** Owner stated in session on 2026-10-07: "part of the guild but a minor sibling really". His 2026 CV already lists Attelje among the Guild's ventures, and the live footer already credited Silly Wizards.
+**Practical consequence:** Palette, typeface, photography rule, hand-built stack and the nine-case grid are unchanged. Copy unchanged; only section labels were added. Merges to `main` when the owner approves the branch preview.
+
 ## 2026-08-18 — Profile `build` approved, and `_Project Notes.md` retired as the record
 **Status:** APPROVED
 **Decision:** Both RECOMMENDED entries of this date are signed off. This repo runs at profile `build`. `_Project Notes.md` is no longer where project status lives — decisions come here, the live job goes to `aios/tasks/`, and current facts are generated into `aios/STATE.md`.

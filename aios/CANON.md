@@ -10,11 +10,16 @@ a sole trader. Twenty-five years of senior international brand experience, deliv
 directly to SMEs, startups and growth companies that want strategic creative without
 agency overhead.
 
-**It is not an agency, not a team, and not a Silly Wizards venture.** The second half
-matters more. There are no layers, no handoffs and no junior team doing the work while
-someone senior attends the meetings — removing exactly that is the proposition. Attelje
-sits *alongside* the Guild, not inside it; others may assist on projects, but the brand,
-the invoicing and the accountability are Simon's alone.
+**It is not an agency and not a team.** There are no layers, no handoffs and no junior
+team doing the work while someone senior attends the meetings — removing exactly that is
+the proposition. Others may assist on projects, but the brand, the invoicing and the
+accountability are Simon's alone.
+
+**It is part of the Silly Wizards Guild family — a minor sibling.** (Superseded "not a
+Silly Wizards venture" on 2026-10-07; see `aios/LOG.md`.) It wears the Guild's editorial
+system — big display type, small tracked labels, keylines, label-and-text rows, one loud
+colour — in its own colours and typeface, and credits the Guild in the footer. It is not
+a sub-brand: no Guild mark in the header, no Guild palette.
 
 This repo is the website and the brand assets it ships with. It is not the business.
 
