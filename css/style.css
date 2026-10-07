@@ -50,6 +50,15 @@
   font-display: swap;
 }
 
+/* Silly Wizards Guild wordmark face — used only for the Guild credit in the footer */
+@font-face {
+  font-family: 'SWG Archivo';
+  src: url('../fonts/archivo-500-swg.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* ------------------------------------------------------------
    DESIGN TOKENS
    Attelje colours + II Vorkurs, set with the Silly Wizards Guild
@@ -228,7 +237,14 @@ ul { list-style: none; }
 .footer__bottom { display: flex; justify-content: space-between; align-items: center; padding: 28px 0; }
 .footer__wordmark img { height: 22px; width: auto; }
 .footer__credit { display: flex; align-items: center; gap: 10px; font-size: var(--t-label); font-weight: 500; letter-spacing: .14em; text-transform: uppercase; color: var(--mute); }
-.footer__credit img { height: 22px; width: auto; }
+.swg-lockup {
+  display: inline-flex; align-items: baseline; gap: .18em;
+  font-family: 'SWG Archivo', 'Archivo', sans-serif; font-weight: 500;
+  font-size: 1.3rem; letter-spacing: -.03em; text-transform: none;
+  color: #FF3D00;
+}
+.swg-lockup img { width: .67em; height: .67em; image-rendering: pixelated; }
+.swg-lockup:hover { color: var(--black); }
 .footer__bar { height: 14px; background: var(--plum); }
 
 /* ------------------------------------------------------------
