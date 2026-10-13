@@ -1,7 +1,7 @@
 /* ============================================================
-   ATTELJE — Main Stylesheet
-   Stack: HTML / CSS / vanilla JS · GitHub · Vercel
-   Font: II Vorkurs (OTF — Light, LightOblique, Medium, MediumOblique, Bold, BoldOblique)
+   ATTELJE â Main Stylesheet
+   Stack: HTML / CSS / vanilla JS Â· GitHub Â· Vercel
+   Font: II Vorkurs (OTF â Light, LightOblique, Medium, MediumOblique, Bold, BoldOblique)
    ============================================================ */
 
 /* ------------------------------------------------------------
@@ -50,7 +50,7 @@
   font-display: swap;
 }
 
-/* Silly Wizards Guild wordmark face — used only for the Guild credit in the footer */
+/* Silly Wizards Guild wordmark face â used only for the Guild credit in the footer */
 @font-face {
   font-family: 'SWG Archivo';
   src: url('../fonts/archivo-500-swg.woff2') format('woff2');
@@ -112,7 +112,7 @@ ul { list-style: none; }
 }
 .label { color: var(--mute); }
 
-/* shared: a section row — label on the left, content on the right, keyline above */
+/* shared: a section row â label on the left, content on the right, keyline above */
 .row {
   display: grid;
   grid-template-columns: var(--label-col) 1fr;
@@ -144,13 +144,13 @@ ul { list-style: none; }
 .nav-spacer { height: var(--nav-height); }
 
 /* ------------------------------------------------------------
-   HERO — homepage + about (video, held inside the gutter)
+   HERO â homepage + about (video, held inside the gutter)
    ------------------------------------------------------------ */
 .hero { margin: 28px var(--gutter) 0; background: var(--black); overflow: hidden; }
 .hero__image { width: 100%; aspect-ratio: 16 / 7; object-fit: cover; }
 
 /* ------------------------------------------------------------
-   TAGLINE — the studio statement, set big and left
+   TAGLINE â the studio statement, set big and left
    ------------------------------------------------------------ */
 .tagline { margin-top: 72px; }
 .tagline p:not(.label) {
@@ -161,7 +161,7 @@ ul { list-style: none; }
 .tagline__light  { color: var(--plum); font-weight: 300; }
 
 /* ------------------------------------------------------------
-   WORK GRID — specimen tiles, caption underneath
+   WORK GRID â specimen tiles, caption underneath
    ------------------------------------------------------------ */
 #work { margin-top: 96px; scroll-margin-top: calc(var(--nav-height) + 24px); }
 .work-grid {
@@ -184,7 +184,7 @@ ul { list-style: none; }
 .work-grid__category { color: var(--mute); text-align: right; }
 
 /* ------------------------------------------------------------
-   MANIFESTO — the one loud panel: plum, pearl type
+   MANIFESTO â the one loud panel: plum, pearl type
    ------------------------------------------------------------ */
 .manifesto {
   margin: 120px var(--gutter) 0;
@@ -201,7 +201,7 @@ ul { list-style: none; }
 }
 
 /* ------------------------------------------------------------
-   STUDIO — image + caption row (homepage, contact)
+   STUDIO â image + caption row (homepage, contact)
    ------------------------------------------------------------ */
 .studio { margin-top: 120px; }
 .studio__image { margin: 0 var(--gutter); width: calc(100% - 2 * var(--gutter)); aspect-ratio: 16 / 7; object-fit: cover; }
@@ -210,7 +210,7 @@ ul { list-style: none; }
 .studio .row { margin-top: 20px; }
 
 /* ------------------------------------------------------------
-   LOGO GRID — specimen tiles
+   LOGO GRID â specimen tiles
    ------------------------------------------------------------ */
 .logos { margin-top: 120px; }
 .logo-grid {
@@ -223,7 +223,7 @@ ul { list-style: none; }
 }
 
 /* ------------------------------------------------------------
-   FOOTER — keyline grid, then the plum strip
+   FOOTER â keyline grid, then the plum strip
    ------------------------------------------------------------ */
 .footer { margin: 140px var(--gutter) 0; padding-bottom: 28px; }
 .footer__nav-label { color: var(--mute); padding: 28px 0 16px; border-top: 1px solid var(--black); }
@@ -232,7 +232,7 @@ ul { list-style: none; }
   font-size: var(--t-h2); font-weight: 500; letter-spacing: -.02em; line-height: 1.1;
   padding: 8px 0 20px; border-bottom: 1px solid var(--line); transition: color .2s var(--ease);
 }
-.footer__nav a::after { content: ' ↗'; color: var(--plum); font-weight: 300; }
+.footer__nav a::after { content: ' â'; color: var(--plum); font-weight: 300; }
 .footer__nav a:hover { color: var(--plum); }
 .footer__bottom { display: flex; justify-content: space-between; align-items: center; padding: 28px 0; }
 .footer__wordmark img { height: 22px; width: auto; }
@@ -275,7 +275,7 @@ ul { list-style: none; }
 .contact { margin: 72px var(--gutter) 0; }
 .contact__inner { border-top: 1px solid var(--line); padding-top: 28px; }
 .contact__heading { font-size: var(--t-display); font-weight: 500; line-height: .92; letter-spacing: -.035em; }
-.contact__heading::after { content: ' ↘'; color: var(--plum); font-weight: 300; }
+.contact__heading::after { content: ' â'; color: var(--plum); font-weight: 300; }
 .contact__body {
   display: grid; grid-template-columns: var(--label-col) 1fr; gap: 24px;
   margin-top: 64px; padding-top: 28px; border-top: 1px solid var(--line);
@@ -337,6 +337,20 @@ ul { list-style: none; }
 
 /* ------------------------------------------------------------
    RESPONSIVE
+
+/* ------------------------------------------------------------
+GUILD
+------------------------------------------------------------ */
+.guild { margin-top: 120px; }
+.guild__links { display: flex; flex-direction: column; }
+.guild__item { display: grid; grid-template-columns: 1fr auto; grid-template-rows: auto auto; align-items: center; padding: 24px 0; border-bottom: 1px solid var(--line); transition: color .2s var(--ease); }
+.guild__item:first-child { border-top: 1px solid var(--line); }
+.guild__name { font-size: var(--t-h1); font-weight: 500; letter-spacing: -.025em; line-height: 1.04; grid-column: 1; grid-row: 1; }
+.guild__sub { font-size: var(--t-label); font-weight: 500; letter-spacing: .14em; text-transform: uppercase; color: var(--mute); margin-top: 8px; grid-column: 1; grid-row: 2; }
+.guild__arrow { font-size: var(--t-h1); font-weight: 300; color: var(--plum); padding-left: 24px; grid-column: 2; grid-row: 1 / 3; align-self: center; transition: transform .2s var(--ease); }
+.guild__item:hover .guild__name { color: var(--plum); }
+.guild__item:hover .guild__arrow { transform: translateX(6px); }
+
    ------------------------------------------------------------ */
 @media (max-width: 900px) {
   .work-grid { grid-template-columns: repeat(2, 1fr); }
